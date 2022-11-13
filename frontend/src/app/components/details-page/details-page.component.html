@@ -1,0 +1,26 @@
+<div class="container"> 
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Library name:</mat-label>
+      <input matInput [(ngModel)]='confige.libraryName'>
+    </mat-form-field>
+  </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Description:</mat-label>
+        <input matInput [(ngModel)]='confige.descrption'>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Defult view template:</mat-label>
+        <mat-select >
+          <mat-option   (click)="selectView('list')" >List</mat-option>
+          <mat-option   (click)="selectView('grid')" >Grid</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+ </div> 
+ <button  mat-raised-button class="nextBtn" (click)="nextPage()" >Next</button>
+<app-footer></app-footer>
+

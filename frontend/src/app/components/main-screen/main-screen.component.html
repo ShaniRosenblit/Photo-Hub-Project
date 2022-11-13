@@ -1,0 +1,47 @@
+ <div class="container"> 
+<div>
+    <input #nameInput type="text" placeholder="Search by name">
+    <button mat-flat-button (click)="getPhotosByName(nameInput.value)" ><mat-icon>search</mat-icon></button> 
+    <button class="returnBtn" mat-raised-button (click)="returnToAll()">Return to all photos</button>  
+</div>
+<br>
+<div>
+    <input #categoryInput type="text"  placeholder="Search by category"/>
+    <button mat-flat-button (click)="getPhotoByCategory(categoryInput.value)"><mat-icon>search</mat-icon></button> 
+</div>
+
+<div class="msgPrivate" *ngIf="!configDb.isInPrivateMode">You not in private mode.You dont see all your picture.</div>
+</div> 
+<div class="contan" *ngIf="configDb.defultview==='list'">
+    <div class="row">
+        <div class="column" *ngFor="let photo of dbPhotos">
+                <img class="listView" src="{{photo.src}}" (click)="selectPhoto(photo)" >
+        </div>
+    </div>
+</div> 
+<div *ngIf="configDb.defultview==='grid'">
+<mat-carousel
+  timings="250ms ease-in"
+  [autoplay]="true"
+  interval="5000"
+  color="accent"
+  maxWidth="auto"
+  proportion="50"
+  slides="{{dbPhotos.count}}"
+  [loop]="true"
+  [hideArrows]="false"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    *ngFor="let slide of dbPhotos; let i = index"
+    [image]="slide.src"
+    overlayColor="#00000040"
+    [hideOverlay]="false"
+  ></mat-carousel-slide>
+</mat-carousel>
+</div>
+<app-footer></app-footer>

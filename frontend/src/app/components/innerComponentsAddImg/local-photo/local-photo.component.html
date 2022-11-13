@@ -1,0 +1,7 @@
+<input #imgInput type="file" (change)="onFileSelected(imgInput)" accept="image/*">
+<div>
+    <img src="{{selectedImg}}">
+</div>
+<div *ngIf="selectedImg" >
+<button mat-raised-button (click)="WantToSave()">Want to save this photo</button>
+</div>

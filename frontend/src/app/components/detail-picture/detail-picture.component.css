@@ -1,0 +1,26 @@
+.container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+ }
+
+ :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  mat-label, input , mat-selec{
+      color:black;
+  }
+  .nextBtn{
+    position:absolute;
+    bottom:50px;
+    right: 0%;
+    width: 200px;
+    height:50px;  
+    background-color: #B388FF;
+    font-size: x-large;
+    border-radius:4px; 
+    text-align: center;
+  }

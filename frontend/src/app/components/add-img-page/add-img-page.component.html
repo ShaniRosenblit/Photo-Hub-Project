@@ -1,0 +1,25 @@
+<mat-button-toggle-group [(ngModel)]="choosenMode" aria-label="Choosen Mode">
+    <mat-button-toggle value="Online" class="bntOnline" (click)="showModeOnline()">Online image</mat-button-toggle>
+    <mat-button-toggle value="Local" class="bntLocal" (click)="showModeLocal()">Local machine</mat-button-toggle>
+    <mat-button-toggle value="Camera" class="bntCamera" (click)="showModeCamera()">Camera</mat-button-toggle>
+  </mat-button-toggle-group>
+<div>
+  <span *ngIf=local>
+    <app-local-photo></app-local-photo>
+  </span>
+  <span *ngIf=camera>
+    <span *ngIf='isCameraAllow'>  
+      <app-webcam-snapshot></app-webcam-snapshot>
+    </span>
+    <span *ngIf='!isCameraAllow'>
+      <h2>You choose not allow the camera.for taking picture you need to change acsses </h2>
+    </span>
+  </span>
+  <span *ngIf=online>
+    <app-online-photo></app-online-photo>
+  </span>
+</div>
+
+
+  <button mat-raised-button class="nextBtn" routerLink="main">Done</button>
+  <app-footer></app-footer>

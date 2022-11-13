@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 400px;
+  }
+.colorStar{
+    color: rgb(182, 182, 19);
+}
+
+mat-icon{
+    font-size: 25px;
+}

@@ -1,0 +1,41 @@
+
+  .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  img{
+    width:200px;
+    height:290px;
+  }
+
+  /* img:active{
+      border: 3px solid black;
+  } */
+.selectedImg{
+border: 3px solid black;
+}
+
+  button{
+    background-color: rebeccapurple;
+    color: white;
+  }
+
+  .saveBtn{
+      background-color: rgb(210, 86, 235);
+  }
+
+  input{
+      height: 30px;
+      width: 200px;
+  }

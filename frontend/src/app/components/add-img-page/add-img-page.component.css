@@ -1,0 +1,26 @@
+mat-button-toggle{
+    color: white;
+}
+
+.bntOnline{
+    background-color: rebeccapurple;
+}
+.bntLocal{
+    background-color: #8E24AA;
+}
+.bntCamera{
+    background-color: #CE93D8;
+}
+.nextBtn{
+    position:absolute;
+    bottom:50px;
+    right: 0%;
+    width: 200px;
+    height:50px;  
+    background-color:purple;
+    font-size: x-large;
+    border-radius:4px; 
+    text-align: center;
+    color: white;
+
+}

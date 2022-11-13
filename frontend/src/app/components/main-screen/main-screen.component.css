@@ -1,0 +1,48 @@
+ input{
+    height: 30px;
+    width: 400px;
+}
+mat-icon{
+    font-size:  30px;
+}
+
+.container {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+ }
+
+ .column {
+    float: left;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid  */
+   .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .listView{
+    width:150px;
+    height:200px;
+    /* border: 1px solid black; */
+  }
+
+  .contan{
+    position: absolute;
+    top: 25%; 
+  } 
+  .returnBtn{
+    background-color:purple;
+    color: white;
+  }
+
+  .msgPrivate{
+color: rgb(177, 27, 27);
+  }

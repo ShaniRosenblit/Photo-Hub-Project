@@ -1,0 +1,16 @@
+<div class="container">
+        <section class="example-section">
+            <p><mat-checkbox class="cmb" [(ngModel)]="configureDb.allowCamra">Allow device camera</mat-checkbox></p>
+          
+            <p><mat-checkbox class="cmb" [(ngModel)]="configureDb.allowLoctoin">Allow device loction</mat-checkbox></p>
+
+            <p><mat-checkbox class="cmb" [(ngModel)]="configureDb.allowPrivateMode">Allow private mode</mat-checkbox></p>
+
+            <p><button mat-stroked-button [ngClass]="configureDb.allowPrivateMode===true?'':'unabaleBtn'" (click)=setPrivateMode()>Private mode password</button></p>
+     
+        </section>
+</div>
+<button mat-raised-button class="nextBtn"  (click)=nextPage()>Next</button>
+<app-footer></app-footer>
+
+

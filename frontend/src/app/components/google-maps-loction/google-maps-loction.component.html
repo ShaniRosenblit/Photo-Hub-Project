@@ -1,0 +1,14 @@
+
+    <h2 mat-dialog-title>Select Loction</h2>
+<mat-dialog-content class="mat-typography">
+    <agm-map [latitude]="lat" [longitude]="lng" (mapReady)="mapReady($event)">
+        <agm-marker [latitude]="lat" [longitude]="lng"> </agm-marker>
+    </agm-map>
+    <button mat-stroked-button (click)="saveMyLoction()">Get My Loction</button>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button cdkFocusInitial (click)="saveLocation()">Save</button>
+ 
+</mat-dialog-actions> 
+

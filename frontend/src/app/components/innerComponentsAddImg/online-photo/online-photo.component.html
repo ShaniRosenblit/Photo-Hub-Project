@@ -1,0 +1,12 @@
+<div>
+    <input type="text" [(ngModel)]="search" placeholder="Search photos..">
+    <button mat-raised-button (click)="searchPhoto()">Search</button>
+    <!-- <span *ngIf="selectPhoto===undefined">
+        <button mat-raised-button class="saveBtn" (click)="wantToSave()">Want to save image</button>
+    </span> -->
+</div>
+<div class="row">
+<div class="column" *ngFor="let photo of dataPhotos">
+        <img src="{{photo.src.medium}}" (click)="selectPhoto(photo.src.medium)" [ngClass]="selectedPhoto===photo.src.medium?'':'selectedImg'">
+</div>
+</div>

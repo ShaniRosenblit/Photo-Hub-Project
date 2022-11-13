@@ -1,0 +1,36 @@
+<mat-toolbar class="toolbar">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon [matMenuTriggerFor]="menu">menu</mat-icon>
+    </button>
+    
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="" >
+        <mat-icon>Home</mat-icon>
+        Home
+      </button>
+      <button mat-menu-item routerLink="about">
+        <mat-icon>About</mat-icon>
+        About
+      </button>
+      <button (click)="changePrivateMode()" mat-menu-item>
+        <mat-icon>Private</mat-icon>
+        Private Mode - On/Off
+      </button>
+      <button mat-menu-item routerLink="allowAccess/details/addImg/main" >
+        <mat-icon>Album</mat-icon>
+        Album
+      </button>
+      <button mat-menu-item routerLink="allowAccess/details/addImg" >
+        <mat-icon>Upload</mat-icon>
+        Upload Photo
+      </button>
+      <button mat-menu-item (click)="addCatgory()">
+        <mat-icon>Categories</mat-icon>
+        Add Categories
+      </button>
+
+   
+    </mat-menu>
+    <span class="example-spacer"></span>
+    <img  alt="Angular Logo" src="../../../../assets/logo.png"/>
+  </mat-toolbar>

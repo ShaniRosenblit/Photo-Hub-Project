@@ -1,0 +1,17 @@
+mat-toolbar{
+    background-color:white;
+}
+
+.mat-icon-button{
+    color:purple;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 50px;  
+}

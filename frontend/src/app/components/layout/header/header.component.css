@@ -1,0 +1,12 @@
+.toolbar {
+    background-color: purple;
+  }
+  img{
+    height:65px;
+  }
+.mat-icon-button{
+  color: white;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

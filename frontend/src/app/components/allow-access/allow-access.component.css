@@ -1,0 +1,22 @@
+.container {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+  }
+
+.nextBtn{
+    position:absolute;
+    bottom:50px;
+    right: 0%;
+    width: 200px;
+    height:50px;  
+    background-color: purple;
+    font-size: x-large;
+    border-radius:4px; 
+    text-align: center;
+    color: white;
+
+}
+.example-section {
+    margin: 15px 0;
+  }

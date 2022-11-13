@@ -1,0 +1,18 @@
+<div id="app">
+  <div><video #video id="video" [width]="WIDTH" [height]="HEIGHT" autoplay></video></div>
+  <div><button id="snap" mat-raised-button  (click)="capture()">Snap Photo</button>
+    <span><button class="savebtn" mat-raised-button *ngIf="isCaptured" (click)="savePic()">Save Photo</button></span>
+  </div>
+  
+  <canvas #canvas id="canvas" [width]="WIDTH" [height]="HEIGHT"></canvas>
+  <ul>
+      <li *ngFor="let c of captures">
+          <img (click)="capturedState(c)" src="{{ c }}" height="100" />
+      </li>
+  </ul>
+  
+</div>
+
+
+  
+
